@@ -1,0 +1,246 @@
+/* ------------ Utilities Theme Classes --------------- */
+
+/* ================== 
+Owl Carousel defaults 
+==================== */
+
+.owl-next:focus,
+.owl-prev:focus,
+.owl-dot:focus {
+  outline: none;
+}
+
+/* ================== 
+Buttons 
+==================== */
+
+.btn {
+    padding: 0.375rem 1rem;
+    border-radius: 0;
+}
+
+.btn-white {
+    background: white;
+    transition: 300ms all ease-in-out;
+
+    &:hover {
+        box-shadow: inset 0px 0px 0px 2px #ffffff;
+        background: transparent;
+        color: #ffffff;
+    }
+}
+
+.btn-theme {
+    background: $theme;
+    transition: 300ms all ease-in-out;
+    color: #ffffff;
+
+    &:hover {
+        box-shadow: 0px 4px 5px 0px #d4d2d2ab;
+        color: white;
+        transform: translateY(-1px);
+    }
+}
+
+.btn-success {
+    background-color: $theme-y;
+    border-color: $theme-y;
+    transition: 300ms all ease-in-out;
+
+    &:hover {
+        box-shadow: 0px 4px 5px 0px #d4d2d2ab;
+        background-color: $theme-y;
+        color: white;
+        transform: translateY(-1px);
+    }
+}
+
+.btn-danger {
+    &:hover {
+        box-shadow: 0px 4px 5px 0px #d4d2d2ab;
+        background-color: red;
+        color: white;
+        transform: translateY(-1px);
+    }
+}
+
+/* ================== 
+Theme Container
+==================== */
+
+.container-theme {
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* ================== 
+Theme Spacing
+==================== */
+
+.mt-default {
+    margin-top: 50px;
+}
+
+.justify-content-evenly {
+    justify-content: space-evenly;
+}
+
+/* ================== 
+Theme Headings
+==================== */
+
+.section-heading {
+    color: white;
+    font-size: 30px;
+    position: relative;
+    margin-bottom: 40px;
+    font-weight: bold;
+
+    &::after {
+        content: '';
+        width: 10%;
+        height: 3px;
+        background: #fdc900;
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+    }
+}
+
+.primary-title {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.secondary-title {
+    font-size: 16px;
+}
+
+/* ================== 
+Text Colors
+==================== */
+
+.text-theme {
+    color: $theme;
+}
+
+.text-theme-secondary {
+    color: $theme-y;
+}
+
+/* ================== 
+Theme Spinner
+==================== */
+
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    .spinner-border {
+        width: 70px;
+        height: 70px;
+        border: 3px solid $theme-y;
+        border-right-color: transparent;
+    }
+}
+
+/* ================== 
+Theme Inputs
+==================== */
+
+.form-control {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 2px solid grey;
+    outline: 0;
+    font-size: 14px;
+
+    &:focus,
+    &:hover {
+        color: grey;
+        background: transparent;
+        border: 0;
+        border-radius: 0;
+        border-bottom: 2px solid $theme-y;
+        box-shadow: none;
+        outline: 0;
+    }
+}
+
+/* ================== 
+Theme Default Classes
+==================== */ 
+
+.theme-bottom-footer {
+    height: calc(100vh - 280px);
+}
+
+.not-authorized-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: $headText;
+}
+
+/* ================== 
+Theme Form
+==================== */
+
+.app-form {
+
+    .form-heading {
+        margin: 40px 0 80px;
+        font-size: 30px;
+        font-weight: bold;
+        color: $headText;
+        text-align: center;
+    }
+
+    .form-group {
+        margin-bottom: 30px;
+
+        label {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        span {
+            font-size: 13px;
+            color: #6c757d;
+            margin-left: 10px;
+        }
+
+        textarea {
+            height: 200px;
+        }
+
+        .custom-file-label {
+            font-weight: normal;
+            font-size: 16px;
+        }
+    }
+
+    .image-container {
+        margin-bottom: 20px;
+
+        .remove-profile-image {
+            color: red;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.input-error {
+    color: red;
+    font-size: 14px;
+}

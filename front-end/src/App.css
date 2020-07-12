@@ -1,0 +1,86 @@
+/* ============ Home Page ============== */
+body {
+  font-family: 'Baloo Da 2', cursive;
+  /* background: #222;
+  color: white; */
+}
+
+.nav-item {
+  margin: 0 10px;
+}
+
+.active {
+  color: black;
+}
+
+.blogs-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  background: white;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 7px 0px gainsboro;
+  color: #212529;
+  transition: 150ms all ease-in;
+}
+
+.blogs-container:hover {
+  text-decoration: none;
+  color: #212529;
+  box-shadow: 0 2px 7px 0px grey;
+}
+
+.blogs-left {
+  flex-basis: 28%;
+}
+
+.blogs-right {
+  flex-basis: 70%;
+}
+
+.alert-info {
+  position: fixed;
+  width: 80%;
+  margin: 0 auto;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  color: #ffffff;
+  background-color: #819c8e;
+  border-color: #819c8e;
+}
+
+.alert-info button {
+  color: white;
+  opacity: 1;
+}
+
+/* =============== Comment Dispay ================== */
+
+.comment-container {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.comment-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid black;
+  overflow: hidden;
+}
+
+.comment-body {
+  flex-basis: 90%;
+  margin-left: 10px;
+}
+
+.comment-body p {
+  margin-bottom: 0;
+}
+
+.comment-body a {
+  color: black;
+  font-weight: bold;
+}

@@ -1,0 +1,84 @@
+/* ------------------------------
+=========== Profile Page ===========
+------------------------------ */
+
+.left-display-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .display-pic-container {
+        width: 200px;
+        height: 200px;
+        border: 3px solid $theme-y;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    p.display-name {
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        color: $headText;
+    }
+}
+
+.profile-tab {
+
+    .nav-item.show .nav-link, 
+    .nav-link.active {
+        background-color: transparent;
+        border-color: transparent transparent transparent;
+    }
+
+    .nav-link {
+        cursor: pointer;
+        transition: 250ms ease all;
+        color: grey;
+        font-weight: bold;
+
+        &:hover,
+        &:focus {
+            border-color: transparent transparent transparent;
+            border-bottom: 2px solid grey;
+        }
+
+        &.active {
+            border-bottom: 2px solid $theme;
+            color: $theme;
+        }
+    }
+}
+
+.tab-pane {
+    padding: 20px;
+
+    .tab-head-text {
+        font-size: 30px;
+        text-align: center;
+        font-weight: bold;
+        color: $headText;
+        margin: 10px 0 20px;
+    }
+
+    p {
+        font-size: 18px;
+
+        span {
+            font-weight: bold;
+        }
+    }
+
+    .no-blogs-page {
+        font-size: 20px;
+        text-align: center;
+        font-weight: bold;
+        color: grey;
+        margin-top: 30px;
+    }
+}

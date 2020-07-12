@@ -1,0 +1,203 @@
+/* ------------------------------
+=========== Home Page ===========
+------------------------------ */
+
+.home-carousel.owl-theme {
+    .owl-item {
+        .carousel-text {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            div {
+                background: #00000094;
+                padding: 40px 100px;
+                animation-name: fadeTextOut;
+                transition: fadeTextOut .2s ease;
+                animation-duration: 1s;
+                animation-fill-mode: both;
+                box-shadow: 1px 5px 7px 0px black;
+            }
+        }
+
+        &.active .carousel-text div {
+            animation-name: fadeText;
+            transition-delay: 10s ease;
+            transition: fadeText .2s ease;
+            animation-duration: 1s;
+            animation-fill-mode: both;
+
+            h1 {
+                animation-name: fadeText;
+                transition-delay: .3s ease;
+                transition: fadeText .2s ease;
+                animation-duration: 1s;
+                animation-fill-mode: both;
+                font-size: 80px;
+                font-weight: bold;
+            }
+
+            p {
+                animation-name: fadeText;
+                transition-delay: .4s ease;
+                transition: fadeText .2s ease;
+                animation-duration: 1s;
+                animation-fill-mode: both;
+                font-size: 30px;
+            }
+        }
+    }
+
+    .owl-dots {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        .owl-dot span {
+            width: 25px;
+            height: 5px;
+            background: $theme;
+            transition: 500ms ease all;
+
+            &:hover {
+                background: $theme-y;
+            }
+        }
+
+        .owl-dot.active span {
+            width: 40px;
+            height: 5px;
+            background: $theme-y;
+        }
+    }
+}
+
+.fadeOut  {
+    animation-name: fadeOut;
+}  
+
+@keyframes fadeOut  {
+    0% {
+        opacity: 1;
+    }  
+    100% {
+        opacity: 0;
+    }  
+}
+
+@keyframes fadeText  {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }  
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }  
+}
+
+@keyframes fadeTextOut  {
+    0% {
+        opacity: 1;
+        transform: translateY(0px);
+    }  
+    100% {
+        opacity: 0;
+        transform: translateY(0);
+    }  
+}
+
+.total-blogs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0;
+
+    .total-number {
+        font-size: 150px;
+        font-weight: bold;
+    }
+
+    .total-descp {
+        font-size: 25px;
+    }
+}
+
+.about-box {
+    padding: 50px;
+    background: white;
+    text-align: center;
+    transition: all .4s;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+
+    .about-body {
+        img {
+            width: 90px;
+        }
+
+        h2 {
+            font-size: 25px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+
+    .hover-overlay::before {
+        content: '';
+        position: absolute;
+        top: 60%;
+        left: -90px;
+        width: 540px;
+        height: 540px;
+        z-index: -1;
+        transition: all .5s ease;
+        transform: translateY(100%);
+        background-color: rgba(255,255,255,0.2);
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 30%;
+        left: -70px;
+        width: 540px;
+        height: 540px;
+        background-color: rgba(255, 255, 255, 0.08);
+        z-index: -1;
+        transition: all .5s ease;
+        transform: translateY(100%);
+    }
+
+    &:hover {
+        background: $theme;
+        color: white;
+
+        &::before {
+            transition-delay: .2s;
+            transform: translateY(0);
+        }
+
+        .hover-overlay::before {
+            transform: translateY(0);
+        }
+
+        .about-body p {
+            color: black;
+        }
+    }
+}

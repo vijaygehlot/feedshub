@@ -1,0 +1,81 @@
+// Variables
+$theme: #222831;
+// $theme: #151922;
+$theme-y: #4ecca3;
+// $theme-y: #fdc900;
+$headText: #383c43;
+$contentText: #393e46;
+$body: #eeeeee;
+// $contentText: #73757a;
+
+
+// Mixins
+
+@mixin headText {
+	font-weight: 600;
+}
+
+@mixin contentText {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+}
+
+body {
+	@include contentText();
+    overflow-x: hidden;
+	color: $contentText;
+	background: $body;
+}
+
+//Imports
+@import "utilities-theme";
+
+/* ========================= Custom Styled CSS ========================== */
+
+// Navbar Section ---->
+
+/*==============================
+========== NAVBAR SECTION ===========
+===============================*/
+
+@import "navbar"; 
+
+// Home Page ---->
+
+/*==============================
+========== HOME PAGE ===========
+===============================*/
+
+@import "home";
+
+// Footer Section ---->
+
+/*==============================
+========== Footer section ===========
+===============================*/
+
+@import "footer";
+
+// Profile Page ---->
+
+/*==============================
+========== PROFILE PAGE ===========
+===============================*/
+
+@import "profile";
+
+// Blogs Page ---->
+
+/*==============================
+========== BLOG PAGE ===========
+===============================*/
+
+@import "blogs";
+
+// Media Queries ---->
+
+/*==============================
+========== MEDIA QUERIES ===========	
+===============================*/
+
+@import "media-queries";
