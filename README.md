@@ -1,3 +1,4 @@
+# Feeds Hub
 
 It’s a Feed app similar to the Facebook feed.
 The user is able to create posts containing text, images.
